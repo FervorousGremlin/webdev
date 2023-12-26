@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css?family=Doppio+One&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=DM+Mono&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
-    <link href="./main.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
     <title>SkySavvy</title>
 </head>
 <body>
@@ -16,7 +16,17 @@
         <div class="main-footer"></div>
         <div class="top-nav"></div>
         <div class="content-section"></div>
-
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="image1.jpg" class="carousel-image">
+                <img src="image2.jpg" class="carousel-image">
+                <img src="image3.jpg" class="carousel-image">
+                <!-- Add more images as needed -->
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+        
 
         <a href="#objects" class="menu-item-objects">
             <div class="menu-icon"></div>
@@ -54,5 +64,28 @@
                 #AlienWorlds #KeplerMission</span>
         </div>
     </div>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("carousel-image");
+        showSlides(slideIndex);
+    
+        function moveSlide(n) {
+          slideIndex += n;
+          if (slideIndex >= slides.length) {
+            slideIndex = 0;
+          } else if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+          }
+          showSlides(slideIndex);
+        }
+    
+        function showSlides(n) {
+          Array.from(slides).forEach(slide => {
+            slide.style.display = "none";  
+          });
+          slides[slideIndex].style.display = "block";
+        }
+    </script>
 </body>
 </html>
