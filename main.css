@@ -164,6 +164,39 @@ body {
   text-align: justified;
 }
 
+.carousel-container {
+  position: relative;
+  max-width: 600px; /* Adjust as needed */
+  top: 35vh;
+  left: 75%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.carousel-image {
+  max-width: 100%;
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: white;
+  font-size: 24px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 16px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
 /* Responsive font sizes and layout adjustments for screens up to 768px wide */
 @media (max-width: 1200px) {
   body {
@@ -231,4 +264,10 @@ body {
   .menu-item-sign-in { top: 30vh; }
   .feature-section{top: 35vh}
   .feature-title{top: 35vh}
+
+  .carousel-container {
+    display: none;
+  }
 }
+
+
