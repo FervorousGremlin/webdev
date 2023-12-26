@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 0.875rem;
+}
+.page-container {
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.main-header {
+  width: 100%;
+  height: 15vh;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 0vh;
+  left: 0vh;
+  border: 1px solid rgba(0,0,0,1);
+}
+.main-footer {
+  width: 100%;
+  height: 10vh;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 90vh;
+  left: 0px;
+  border: 1px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.top-nav {
+  width: 100%;
+  height: 10vh;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 15vh;
+  left: 0px;
+  border: 1px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.content-section {
+  width: 100%;
+  height: 55vh;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 35vh;
+  left: 0px;
+  border: 1px solid rgba(0,0,0,1);
+}
+.site-title {
+  width: 100%;
+  color: rgb(162, 143, 247);
+  position: absolute;
+  top: 0px;
+  left: 0vh;
+  font-family: Baloo;
+  font-weight: Regular;
+  font-size: 144px;
+  opacity: 1;
+  text-align: center;
+}
+
+
+.menu-label {
+  width: 15vh;
+  color: rgb(226, 150, 9, 1);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-family: Doppio One;
+  font-weight: Regular;
+  font-size: 28px;
+  opacity: 1;
+  text-align: center;
+}
+.menu-icon,
+.menu-item-objects,
+.menu-item-plan-observations,
+.menu-item-charts,
+.menu-item-more,
+.menu-item-feedback,
+.menu-item-sign-in {
+  width: 16.67%; /* Each item takes up 1/6th of the total width */
+  height: 10vh; /* Match the height of the nav bar */
+  background: rgb(0, 0, 0); /* Example color, adjust as needed */
+  opacity: 1;
+  position: absolute;
+  top: 15vh;
+  border: 1px solid rgba(0,0,0,0.2); /* Lighter border for aesthetics */
+  overflow: hidden;
+}
+.menu-item-objects { left: 0%; }
+.menu-item-plan-observations { left: 16.67%; }
+.menu-item-charts { left: 33.34%; }
+.menu-item-more { left: 50.01%; }
+.menu-item-feedback { left: 66.68%; }
+.menu-item-sign-in { left: 83.35%; }
+
+.menu-item-impressum {
+  width: 100%;
+  color: rgba(156,173,202,1);
+  position: absolute;
+  top: 90vh;
+  left: 0px;
+  font-family: DM Mono;
+  font-weight: Medium;
+  font-size: 72px;
+  opacity: 1;
+  text-align: center;
+}
+.feature-section {
+  width: 100%;
+  height: 10vh;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 25vh;
+  left: 0px;
+  overflow: hidden;
+}
+.feature-title {
+  width: 100%;
+  color: rgba(226,150,9,1);
+  position: absolute;
+  top: 27vh;
+  left: 0px;
+  font-family: Doppio One;
+  font-weight: Regular;
+  font-size: 28px;
+  opacity: 1;
+  text-align: center;
+}
+.news-article {
+  width: 70%;
+  height: 50vh;
+  background: rgba(0,0,0,1);
+  margin: 10px;
+  opacity: 1;
+  position: absolute;
+  top: 35vh;
+  left: 65px;
+  overflow: hidden;
+}
+.news-content {
+  width: 90%;
+  height: 90%;
+  color: rgb(219, 152, 26);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-family: DM Sans;
+  font-weight: Medium;
+  font-size: 32px;
+  opacity: 1;
+  text-align: justified;
+}
+
+/* Responsive font sizes and layout adjustments for screens up to 768px wide */
+@media (max-width: 1200px) {
+  body {
+    font-size: 0.75rem; /* Slightly smaller font size on smaller screens */
+  }
+
+  .site-title {
+    font-size: 5vw; /* Responsive font size */
+  }
+
+  .menu-label{
+    font-size: 2vw; /* Responsive font size for various text elements */
+  }
+  .news-content {
+    font-size: 3vw;
+  }
+  .feature-title {
+    font-size: 3vw;
+  }
+  .main-header,
+  .main-footer {
+    height: 12vh; /* Adjust header and footer height */
+  }
+
+  .top-nav {
+    height: 5vh; /* Adjust navigation bar and menu icon height */
+  }
+
+  .content-section {
+    height: 50vh; /* Adjust the main content section height */
+    top: 40vh;
+  }
+
+  .feature-section {
+    height: 5vh; /* Adjust the feature section height */
+  }
+
+  .news-article {
+    width: 100%; /* Make news articles full width */
+    height: 40vh; /* Adjust the news article height */
+    left: 0; /* Align to the left */
+    top: 45vh;
+  }
+
+  /* Adjust menu items for a vertical layout */
+  .menu-icon,
+  .menu-item-objects,
+  .menu-item-plan-observations,
+  .menu-item-charts,
+  .menu-item-more,
+  .menu-item-feedback,
+  .menu-item-sign-in {
+    width: 100%; /* Full width for a vertical layout */
+    height: 5vh; /* Adjust height for each menu item */
+    left: 0vh; 
+    text-align: center;
+  }
+
+  /* Position each menu item below the previous one */
+  .menu-item-objects { top: 5vh; }
+  .menu-item-plan-observations { top: 10vh; }
+  .menu-item-charts { top: 15vh; }
+  .menu-item-more { top: 20vh; }
+  .menu-item-feedback { top: 25vh; }
+  .menu-item-sign-in { top: 30vh; }
+  .feature-section{top: 35vh}
+  .feature-title{top: 35vh}
+}
